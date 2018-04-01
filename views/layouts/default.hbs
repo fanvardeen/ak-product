@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Booking</title>
+</head>
+<link href="/stylesheets/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<script type="text/javaScript" src="/js/common.js"></script>
+
+<body>
+    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/api">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="javascript:void(0)">About</a>
+                </li>               
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/registration">Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Contact</a>
+                </li>
+                 <li class="nav-item">
+                      {{#if Userdetails.username}}
+                      <a class="nav-link" href="/api/logout">Logout</a>                     
+                      {{else}}
+                        <a class="nav-link" href="/api/login">Login</a>                      
+                      {{/if}}
+                </li>
+            </ul>
+            {{#if Userdetails.username }}
+            <span class="welcome">Welcome {{Userdetails.username}}!!</span>
+            {{else}}
+            <span class="welcome">Welcome Guest!!</span>
+            {{/if}}
+            <form class="form-inline my-2 my-lg-0" action="/api/filteredproducts" method="post" id="searchform">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" name="txtsearch" id="txtsearch">
+                <input type="submit" class="btn btn-success my-2 my-sm-0" value="Search">
+            </form>
+        </div>
+    </nav>
+    <div id="container" class="container-fluid">
+        {{{body}}}
+    </div>
+    <footer class="container-fluid text-center">
+        <p>Footer Text</p>
+    </footer>
+</body>
+
+</html>

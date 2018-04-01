@@ -1,0 +1,16 @@
+<h2 class="form-signin-heading">Featured Product list...</h2>
+<div class="card-columns">
+{{#each productitems}}
+ <div class="card">
+    <img class="card-img-top img-fluid" src="/images/{{Image}}" alt="Card image cap">
+    <div class="card-block">
+      <h5 class="card-title">{{ProdcutName}}</h5>
+      
+      <p class="card-text">
+      Price : {{ProductPrice}} {{Currency}}
+        <button type="button" class="btn btn-primary btn-md">Add to cart</button>  
+      </p>
+    </div>
+  </div>   
+ {{/each}}
+</div> 
