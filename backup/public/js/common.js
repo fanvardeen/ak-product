@@ -1,7 +1,3 @@
-$(function() {
-   // showselectedItems();
-  });
-
 function fnGetLoginAvailbility() {
     var Loginid = $("#name").val();
     if (Loginid != '') {
@@ -33,61 +29,6 @@ function fnGetLoginAvailbility() {
     }
 }
 
-function addtocart(id){ 
-  var Productid = $(id).attr('productid'); 
-    $.ajax({
-        url: '/api/addtocart/'+ Productid,
-        dataType: "json",
-        type: "POST",
-        cache: false,
-        timeout: 5000,
-        contentType: "application/json; charset=utf-8",
-        success: function (data) { 
-           $(id).parents('.card').find('#dvAddtocart').removeClass('hide');
-           $(id).parents('.card').find('#btnRemovetocart').removeClass('hide');
-           $(id).hide();
-           $('#picon').attr("data-count",data.Userdetails.selectedProductsCount);
-           $('#piconinv').attr("data-count",data.Userdetails.selectedProductsCount+'b');
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-           alert('error ' + errorThrown);
-        }
-    });
-}
-
-function removetocart(id){ 
-    var Productid = $(id).attr('productid'); 
-      $.ajax({
-          url: '/api/removetocart/'+ Productid,
-          dataType: "json",
-          type: "POST",
-          cache: false,
-          timeout: 5000,
-          contentType: "application/json; charset=utf-8",
-          success: function (data) { 
-             $(id).parents('.card').find('#dvAddtocart').addClass('hide');
-             $(id).parents('.card').find('#btnRemovetocart').addClass('hide');             
-             $(id).parents('.card').find('#btnAddtocart').show();
-             $('#picon').attr("data-count",data.Userdetails.selectedProductsCount);
-             $('#piconinv').attr("data-count",data.Userdetails.selectedProductsCount+'b');
-          },
-          error: function (jqXHR, textStatus, errorThrown) {
-             alert('error ' + errorThrown);
-          }
-      });
-  }
-
-//Handlebars.registerHelper('icon-checked', function(ProductID) { 
- //   console.log(ProductID);
-//    return new Handlebars.SafeString('<img class="card-img-top img-fluid" src="/images/addtocart.png" alt="">' );
-//});
-   
-function showselectedItems(){
-    var source = $('#selectedIcon-template').html();
-    var template = Handlebars.compile(source);
-    var html = template(); 
-    $('#dvAddtocart').html(html);
-}
 
 function checkPass() {
     //Store the password field objects into variables ...

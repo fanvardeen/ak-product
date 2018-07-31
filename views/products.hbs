@@ -1,16 +1,34 @@
-<h2 class="form-signin-heading">Featured Product list...</h2>
+<h2 class="form-signin-heading">
+
+  Featured Product list...</h2>
 <div class="card-columns">
-{{#each productitems}}
- <div class="card">
+  {{#each productitems}}
+  <div class="card" productid={{pid}}>
     <img class="card-img-top img-fluid" src="/images/{{Image}}" alt="Card image cap">
+
+    {{#if selected }}
+    <div id="dvAddtocart" pid={{pid}} class="floatR">
+      <img class="card-img-top img-fluid" src="/images/addtocart.png" alt="">
+    </div>
+    {{else}}
+    <div id="dvAddtocart" pid={{pid}} class="floatR hide">
+      <img class="card-img-top img-fluid" src="/images/addtocart.png" alt="">
+    </div>
+    {{/if}}
+
     <div class="card-block">
       <h5 class="card-title">{{ProdcutName}}</h5>
-      
       <p class="card-text">
-      Price : {{ProductPrice}} {{Currency}}
-        <button type="button" class="btn btn-primary btn-md">Add to cart</button>  
+        Price : {{ProductPrice}} {{Currency}}
+         {{#if selected }}
+        <button type="button" class="btn btn-primary btn-md floatR hide" productid={{pid}} id="btnAddtocart" onclick="addtocart(this)">Add to cart</button>
+        <button type="button" class="btn btn-secondary btn-md floatR" productid={{pid}} id="btnRemovetocart" onclick="removetocart(this)">Remove to cart</button>
+        {{else}}
+         <button type="button" class="btn btn-primary btn-md floatR " productid={{pid}} id="btnAddtocart" onclick="addtocart(this)">Add to cart</button>
+         <button type="button" class="btn btn-secondary btn-md hide floatR" productid={{pid}} id="btnRemovetocart" onclick="removetocart(this)">Remove to cart</button>
+      {{/if}}
       </p>
     </div>
-  </div>   
- {{/each}}
-</div> 
+  </div>
+  {{/each}}
+</div>
