@@ -1,0 +1,51 @@
+{
+  "recipes": [
+    {
+      "id": "I001",
+      "title": "Chicken garlic bites",
+      "desc": "Chicken garlic bites in 10 easy steps",
+      "ingredients" : "2 boneless skinless chicken breasts cute into bite-sized pieces; 1/2 cup olive oil; 4 garlic cloves (peeled and minced); 1/4 teaspoon pepper; 1/2 cup breadcrumbs; 1/4 teaspoon cayenne pepper",
+      "prep" : "(1) Place chicken in a shallow dish. (2) Mix the olive oil, garlic and black pepper in a separate small bowl - this will be your marinade. (3) Pour the marinade over the chicken. (4) Cover the chicken then leave it to marinate for 30 minutes. (5) Drain. (6) Preheat the oven to 475 degrees Fahrenheit. (7) Mix the bread crumbs and cayenne pepper. (8) Coat the marinated chicken with the crumbs. (9) Arrange in a single layer on a cookie sheet. (10) Bake for 10 minutes or until brown.",
+      "preparationtime" : "30-45 minutes",
+      "isveg" : "N",
+      "category" : "Appetizers",
+  "audio" : "",
+  "video" : "",
+  "preparedby" : "",
+  "preparedon" : "",
+  "comments" :"" 
+    },
+    
+     {
+      "id": "I002",
+      "title": "PEANUT SNACK",
+      "desc": "PEANUT SNACK",
+      "integredients" : "100 grams peanuts (salted) handful coriander leaves chopped handful onions chopped. 1 tomato chopped (it should not be too ripped) 1 lime",
+      "prep" : "Mix all ingredients and enjoy",
+      "preparationtime" : "10 MINUTES",
+     "isveg" : "Y",
+     "category" : "Appetizers",
+  "audio" : "",
+  "video" : "",
+  "preparedby" : "",
+  "preparedon" : "",
+  "comments" :"" 
+      },
+
+       {
+      "id": "I003",
+      "title": "PEANUT BAR",
+      "desc": "PEANUT BAR",
+      "integredients" : "100 grams peanuts (salted) handful coriander leaves chopped handful onions chopped. 1 tomato chopped (it should not be too ripped) 1 lime",
+      "prep" : "Mix all ingredients and enjoy",
+      "preparationtime" : "10 MINUTES",
+     "isveg" : "Y",
+     "category" : "Appetizers",
+  "audio" : "",
+  "video" : "",
+  "preparedby" : "",
+  "preparedon" : "",
+  "comments" :"" 
+      }
+  ]
+}

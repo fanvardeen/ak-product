@@ -1,0 +1,46 @@
+{
+  "menus": [
+    {
+      "id": "M001",  
+      "items":[
+        {
+          "id" : "I002",
+          "title" : "Chicken garlic"
+        },
+        {
+          "id" : "I001",
+          "title" : "Chicken garlic 1"
+        }
+        
+        ],
+      
+      "category" : "Appetizers",
+  "class" : "J",
+  "route" : "LHRDXB",
+  "flight" : ""
+ 
+    },
+    
+    {
+      "id": "M002", 
+       "items":[
+        {
+          "id" : "I001",
+          "title" : "Chicken garlic"
+        },
+        {
+          "id" : "I002",
+          "title" : "Chicken garlic 1"
+        }
+        
+        ],
+      "category" : "Appetizers",
+  "class" : "Y",
+  "route" : "DXBLHR",
+  "flight" : "EK500"
+ 
+    }
+
+      
+  ]
+}

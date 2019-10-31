@@ -1,0 +1,30 @@
+<h2 class="form-signin-heading">
+
+  Featured search list...</h2>
+
+
+
+
+<div class="rec-table">
+
+  <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+  <div class="w3-white w3-padding notranslate w3-padding-16">
+    <table id="customers">
+      <tbody>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+        {{#each menuitems}}
+        <tr>
+          <td> <a href="/api/filteredreceipe?id={{id}}" >{{title}}</a></td>
+
+          <td>{{desc}}</td>
+          <td><img src='/images/{{id}}.jpg' style="width:50px;height:40px;" > </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+</div>

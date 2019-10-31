@@ -1,0 +1,66 @@
+<h2 class="form-signin-heading">
+
+  Featured menu list...</h2>
+
+<div class="ts-cpd" data-ts-comp="ContactabilityPassportDetails" id="ContactabilityPassportDetails-1">
+  <input type="hidden" value="[]" data-prefill-datasource="">
+  <fieldset class="ts-cpd__content">
+
+
+    <div class="rec-table">
+      <div class="chef-form__block">
+        <div class="chef-form__block__elem ts-cpd__elem--fix ts-form__block__elem--date-adjust chef-row">
+          <label for="ek-field-ts-cpd-passport-number-1" data-ek-id="ek-ts-cpd-passport-number-label">
+            Search Receipe
+          </label>
+          <input type="text" name="ts-cpd-passport-number-1" value="" class="" data-masked=""
+            id="ek-field-ts-cpd-passport-number-1" data-ek-id="ek-ts-cpd-passport-number-1" data-value=""
+            data-requiredifsectiondirty="#ContactabilityPassportDetails-1" data-alphanum="true" minlength="4"
+            maxlength="15" data-trim="true" data-ts-modified-basevalue="">
+
+        </div>
+
+        <div class="chef-form__block__elem ts-form__block__elem--date-adjust chef-row  ">
+          <fieldset>
+            <div class="ts-dropdown  " data-ts-comp="Dropdown">
+              <label class="ts-aria-only" for="ts-cpd-gender-1">
+                Flight Route </label>
+              <select name="ts-cpd-gender-1" id="ts-cpd-gender-1" data-ek-id="ek-ts-cpd-gender" aria-hidden="true"
+                data-prefill-link="gender" data-value="">
+                <option value="">Routes</option>
+                <option value="1">LHR-BOB</option>
+                <option value="2">MAA-DXB</option>
+              </select>
+              <span class="ts-dropdown__chevron"></span>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+
+
+<div class="rec-table">
+  <div class="w3-white w3-padding notranslate w3-padding-16">
+    <table id="customers">
+      <tbody>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+        </tr>
+        {{#each menuitems}}
+        <tr>
+          <td> <a href="/api/filteredmenu?id={{id}}" >{{id}}</a></td>
+
+          
+          <td><img src='/images/{{id}}.jpg' style="width:50px;height:40px;" > </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+</div>

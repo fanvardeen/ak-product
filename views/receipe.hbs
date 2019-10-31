@@ -1,0 +1,191 @@
+{{!-- <h2 class="form-signin-heading">
+  Receipe</h2>
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td>
+        <div id="ReviewPost">
+          {{#each menuitems}}
+          <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td class="tablerow">
+                  <div id="title426">
+                    <h2>{{desc}}</h2>
+                    <table with="100%" border="0" align="right">
+                      <tbody>
+                        <tr>
+                          <td align="right" class="breadcrumbs"><span class="breadcrumbs">23rd Mar 2016</span></td>
+                        </tr>
+                      </tbody>
+                    </table><br><span class="breadcrumbs">posted by</span>&nbsp;<span class="breadcrumbs"><strong>Ronjoy
+                        Bonifacio</strong></span>
+                  </div>
+                  <div style="display:block;" id="Cmnt426"><span class="breadcrumbs"><a
+                        onclick="ShowComment('Cmnt426','commentdesc426',426,'articleimages426')"
+                        style="cursor:hand">Comments</a>:&nbsp;<strong><a
+                          onclick="ShowComment('Cmnt426','commentdesc426',426,'articleimages426')"
+                          style="cursor:hand"><label id="lbllcmntval426">0</label></a></strong>&nbsp;|&nbsp;<label
+                        id="lbllike426">Likes:&nbsp;<strong>8</strong></label></span></div>
+                  <hr>
+                  <div style="display:block;" id="desc426"><strong>Ingredients:</strong>&nbsp;{{ingredients}}</div><br>
+                  <div style="display:block;" id="desc426"><strong>Preparation:</strong>&nbsp;{{prep}}</div><br>
+                  <div style="display:block;" id="desc426"><strong>Prepare Time:</strong>&nbsp;{{preparationtime}}</div>
+                  <br>
+                  <div style="display:block;" id="desc426"><strong>Veg/NonVeg:</strong>&nbsp;{{isveg}}</div><br>
+                  <div style="display:block;" id="desc426"><strong>Serves:</strong>&nbsp;1-2 people</div>
+                  <div style="display:block;padding-bottom:7px;padding-top:5px;padding-left:5px;padding-right:10px"
+                    id="articleimages426">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <ul class="discussionLinks" id="divlike1426">
+                    <li><a class="discussionIcon"
+                        onclick="ShowComment('Cmnt426','commentdesc426',426,'articleimages426')"><img
+                          src="/gw/travel/PublishingImages/travelicons/comments.gif" alt="Add a comment"></a><a
+                        class="discussionText"
+                        onclick="ShowComment('Cmnt426','commentdesc426',426,'articleimages426')">Add a Comment</a></li>
+                    <li><a class="discussionIcon" id="lbllikeimg426"><label id="likeimage426"></label></a><a
+                        class="discussionIcon" onclick="CreateNewItem(426,0)"><img
+                          src="/gw/travel/PublishingImages/travelicons/like.gif" alt="Like a post"></a><a
+                        class="discussionText" onclick="CreateNewItem(426,0)">LIKE</a></li>
+                  </ul>
+                  <ul class="discussionLinks" id="divlike2426" style="display:none;">
+                    <li><a class="discussionIcon"
+                        onclick="ShowComment('Cmnt426','commentdesc426',426,'articleimages426')"><img
+                          src="/gw/travel/PublishingImages/travelicons/comments.gif" alt="Add a comment"></a><a
+                        class="discussionText"
+                        onclick="ShowComment('Cmnt426','commentdesc426',426,'articleimages426')">Add a Comment</a></li>
+                    <li style="cursor:none;"><strong>You have liked this article.</strong></li>
+                    <li><a class="discussionIcon"
+                        href="mailto:?Subject=You might be interested in this Talk Central discussion: Chicken garlic bites in 10 easy steps&amp;body=/gw/community/pages/recipedetail.aspx?pid=426"><img
+                          src="/gw/community/PublishingImages/email.jpg" alt="Email a colleague"></a><a
+                        class="discussionText"
+                        href="mailto:?Subject=You might be interested in this Talk Central discussion: Chicken garlic bites in 10 easy steps&amp;body=/gw/community/pages/recipedetail.aspx?pid=426">Email
+                        a colleague</a></li>
+                    <li><a class="discussionIcon" onclick="ReportAbuse(426,461010,'A')"><img
+                          src="/gw/travel/PublishingImages/travelicons/RA.gif" alt="Like a post"></a><a
+                        class="discussionText" onclick="ReportAbuse(426,461010,'A')">Report Abuse</a></li>
+                  </ul>
+                  <div style="padding-top:5px;clear:both;"><span id="Comment1_lblCount426"></span></div>
+                  <div style="display:none;clear:both;" id="commentdesc426"><textarea id="cmnttxtdescription426"
+                      rows="4" style="width: 100%" onkeydown="LimitLength(this, 500);"
+                      onkeypress="LimitLength(this, 500);" onfocus="LimitAndShowLength(this, 500,426);"
+                      onkeyup="LimitAndShowLength(this, 500,426);"
+                      onmouseup="LimitAndShowLength(this, 500,426);"></textarea>
+                    <table with="100%" border="0" align="right">
+                      <tbody>
+                        <tr>
+                          <td align="right"><input type="button" value="Save"
+                              onclick="SaveComment('cmnttxtdescription426',426,'0',0)" id="btnSaveComment" align="right"
+                              class="formbutton">&nbsp;<input type="button" value="Cancel"
+                              onclick="CancelComment('cmnttxtdescription426',426,'0',0)" id="btnCancelComment"
+                              align="right" class="formbutton"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div><br>
+                  <div class="discussionReview" id="ReviewCommentsSection426">
+                    <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0"></table>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {{/each}}
+      </td>
+    </tr>
+  </tbody>
+</table> --}}
+
+
+
+<body>
+  {{#each menuitems}}
+  <div class="page-title-header">
+    <div class="main-content-wrapper"><a class="back-to-overview-link" href="/api/search">Back to overview</a>
+      <h1 class="page-header-title" data-ix="fade-in-on-load"
+        style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">
+        {{title}}</h1>
+      <h2 class="page-header-title subtitle" data-ix="fade-in-on-load-2"
+        style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">
+        {{desc}} </h2>
+    </div>
+  </div>
+  <div class="page-image-header" style="background-image: url('/images/receipe.jpg')">
+    <div class="recipe-image-overlay">
+      <div class="main-content-wrapper recipe-image">
+        <div class="recipe-summary-block w-clearfix" data-ix="fade-in-on-load-3"
+          style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">
+          <div class="recipe-summary-item-block"><img class="recipe-summary-icon" sizes="28px"
+              src='/images/category.png'>
+            <div class="description recipe-summary-title">Category</div>
+            <div class="recipe-summary-title">{{category}}</div>
+          </div>
+          <div class="recipe-summary-item-block"><img class="recipe-summary-icon" src='/images/time.png'>
+            <div class="description recipe-summary-title">Time</div>
+            <div class="recipe-summary-title">{{preparationtime}}</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="main-content-wrapper">
+      <div class="recipe-row w-row">
+        <div class="recipe-column-left w-col w-col-5">
+          <div class="sidebar-block">
+            <div class="block-title">Ingredients:</div>
+            <div class="ingredients-text-block w-richtext">
+              <ul>
+                <li><strong>1 pound&nbsp;</strong>boneless pork loin</li>
+                <li><strong>1 teaspoon</strong>&nbsp;cayenne pepper</li>
+                <li>kosher salt and black pepper</li>
+                <li><strong>1 cucumber</strong>, thinly sliced</li>
+                <li><strong>3 tablespoons</strong>&nbsp;cider vinegar</li>
+                <li><strong>2 tablespoons</strong>&nbsp;olive oil</li>
+                <li><strong>2 teaspoons</strong>&nbsp;brown sugar</li>
+                <li><strong>1/3 cup</strong>&nbsp;mayonnaise</li>
+                <li><strong>1 teaspoon</strong>&nbsp;cayenne pepper</li>
+                <li><strong>3 tablespoons</strong>&nbsp;cider vinegar</li>
+                <li><strong>1 pound&nbsp;</strong>boneless pork loin</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <div class="block-title">Needed:</div>
+            <div class="ingredients-text-block w-richtext">
+              <ul>
+                <li>Blender</li>
+                <li>Grill pan</li>
+                <li>Mixer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="recipe-column-right w-col w-col-7">
+          <div class="recipe-content-block">
+            <h1 class="recipe-intro-title">Instructions</h1>
+            {{!-- <div class="recipe-video-block">
+              <div class="recipe-video w-embed w-video" style="padding-top: 56.39999999999999%;"><iframe
+                  class="embedly-embed"
+                  src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F4wSQB6FRUvM%3Ffeature%3Doembed&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4wSQB6FRUvM&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F4wSQB6FRUvM%2Fhqdefault.jpg&amp;key=c4e54deccf4d4ec997a64902e9a30300&amp;type=text%2Fhtml&amp;schema=youtube"
+                  width="250" height="141" scrolling="no" frameborder="0" allowfullscreen=""></iframe></div>
+            </div> --}}
+            <div class="recipe-rich-text-block w-richtext">
+              <p>{{prep}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+</body>

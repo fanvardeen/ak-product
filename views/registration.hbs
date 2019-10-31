@@ -1,0 +1,193 @@
+<div class="row">
+    <div class="col-md-6">
+        <form action="/api/users/add" method="post" id="registrationForm" role="form">
+            {{#if statussuccess}}
+            <div class="alert alert-success fade in">
+                <!--<a href="#" class="close" data-dismiss="alert">Close</a> -->
+                <span>{{msg}}</span>
+            </div>
+            {{/if}}
+            {{#if statuserror}}
+            <div class="alert alert-danger fade in">
+                <span>{{msg}}</span>
+            </div>
+            {{/if}}
+
+            <fieldset>
+                <legend class="text-center">Valid information is required to register.
+                    <span class="req">
+                        <small> required *</small>
+                    </span>
+                </legend>
+                <div class="form-group regtype">
+                    <label for="regtype">
+                        <span class="req">* </span> Registration Type: </label>
+                    <select class="form-control custom-select" id="regtype" name="regtype" role="menu">
+                        <option selected value="0">Client/User</option>
+                        <option value="1">Product Seller</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phonenumber">
+                        <span class="req">* </span> Phone Number: </label>
+                    <input required="" type="text" name="mobile" id="mobile" class="form-control phone" maxlength="28"
+                        onkeyup="validatephone(this);" placeholder="Enter your 10 digit mobile no">
+                </div>
+
+                <div class="form-group">
+                    <label for="firstname">
+                        <span class="req">* </span> First name: </label>
+                    <input class="form-control" type="text" name="firstname" id="firstname"
+                        placeholder="Enter your first name" onkeyup="Validate(this)" required="">
+                    <div id="errFirst"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">
+                        <span class="req">* </span> Last name: </label>
+                    <input class="form-control" type="text" name="lastname" id="lastname" onkeyup="Validate(this)"
+                        placeholder="Enter your last name" required="">
+                    <div id="errLast"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        <span class="req">* </span> Email Address: </label>
+                    <input class="form-control" required="" type="text" name="email" id="email"
+                        placeholder="Enter your email ex.test@mail.com" onchange="email_validate(this.value);">
+                    <div class="status" id="status"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">
+                        <span class="req">* </span> User name:
+                        <small>This will be your login user name</small>
+                    </label>
+                    <input class="form-control" type="text" name="userid" id="userid" onkeyup="Validate(this)"
+                        placeholder="Enter minimum 6 letters login/User id" required="Please fill username/id"
+                        minlength="6" maxlength="6">
+                    <div id="errLast"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <span class="req">* </span> Password: </label>
+                    <input required="" name="password" type="password" class="form-control inputpass"
+                        placeholder="Enter your Password" minlength="4" maxlength="16" id="pass1">
+                    <p></p>
+
+                    <label for="password">
+                        <span class="req">* </span> Password Confirm: </label>
+                    <input required="" name="password" type="password" class="form-control inputpass" minlength="4"
+                        maxlength="16" placeholder="Enter password again to validate" id="pass2"
+                        onkeyup="checkPass(); return false;">
+                    <span id="confirmMessage" class="confirmMessage"></span>
+                </div>
+
+                <div class="form-group">
+
+                    <!--?php //$date_entered = date('m/d/Y H:i:s'); ?-->
+                    <input type="hidden" value="<?php //echo $date_entered; ?>" name="dateregistered">
+                    <input type="hidden" value="0" name="activate">
+                    <hr>
+
+                    <input type="checkbox" required="" name="terms"
+                        onchange="this.setCustomValidity(validity.valueMissing ? 'Please indicate that you accept the Terms and Conditions' : '');"
+                        id="field_terms"> &nbsp;
+                    <label for="terms">I agree with the
+                        <a href="terms.php" title="You may read our terms and conditions by clicking on this link">terms
+                            and conditions</a> for Registration.</label>
+                    <span class="req">* </span>
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" name="submit_reg" value="Register">
+                </div>
+
+            </fieldset>
+            <h5>You will receive an email to complete the registration and validation process. </h5>
+            <h5>Be sure to check your spam folders. </h5>
+        </form>
+        <!-- ends register form -->
+
+        <script type="text/javascript">
+            document.getElementById("field_terms").setCustomValidity("Please indicate that you accept the Terms and Conditions");
+        </script>
+    </div>
+    <!-- ends col-6 -->
+
+    <!--<div class="col-md-6">
+        <h1 class="page-header">TSW =|= </h1>
+        <p>Form can be used with TSW Login-Register applet available on Github
+            <br>
+            <a href="https://github.com/tradesouthwest/tsw-login-register" title="github" target="_blank">https://github.com/tradesouthwest/tsw-login-register</a>
+        </p>
+
+    </div> -->
+</div>
+
+
+<div class="container-contact100">
+    <div class="wrap-contact100">
+        <form class="contact100-form validate-form">
+            <span class="contact100-form-title">
+                Contact Us
+            </span>
+            <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+                <span class="label-input100">FULL NAME *</span>
+                <input class="input100" type="text" name="name" placeholder="Enter Your Name">
+            </div>
+
+            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="">
+                <span class="label-input100 req">First name</span>
+                <input class="input100 form-control" type="text" name="firstname" id="firstname"
+                    onkeyup="Validate(this)" placeholder="Enter your first name ">
+            </div>
+
+            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                <span class="label-input100">Last name</span>
+                <input class="input100 form-control" type="text" name="lastname" placeholder="Enter your Last name">
+            </div>
+            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Enter Your Email (e@a.x)">
+                <span class="label-input100">Email *</span>
+                <input class="input100" type="text" name="email" placeholder="Enter Your Email ">
+            </div>
+            <div class="wrap-input100 bg1 rs1-wrap-input100">
+                <span class="label-input100">Phone</span>
+                <input class="input100" type="text" name="phone" placeholder="Enter Number Phone">
+            </div>
+            <div class="wrap-input100 input100-select bg1">
+                <span class="label-input100">Needed Services *</span>
+                <div>
+                    <select class="js-select2 select2-hidden-accessible" name="service" tabindex="-1"
+                        aria-hidden="true">
+                        <option>Please chooses</option>
+                        <option>eCommerce Bussiness</option>
+                        <option>UI/UX Design</option>
+                        <option>Online Services</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                        style="width: 188.667px;"><span class="selection"><span
+                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                aria-expanded="false" tabindex="0" aria-labelledby="select2-service-7m-container"><span
+                                    class="select2-selection__rendered" id="select2-service-7m-container"
+                                    title="Please chooses">Please chooses</span><span class="select2-selection__arrow"
+                                    role="presentation"><b role="presentation"></b></span></span></span><span
+                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                    <div class="dropDownSelect2"></div>
+                </div>
+            </div>
+            <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate="Please Type Your Message">
+                <span class="label-input100">Message</span>
+                <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+            </div>
+            <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn">
+                    <span>
+                        Submit
+                        <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

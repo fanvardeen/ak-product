@@ -1,0 +1,78 @@
+<body>
+  {{#each menuitems}}
+  <div class="page-title-header">
+    <div class="main-content-wrapper"><a class="back-to-overview-link" href="/api/menusearch">Back to overview</a>
+      <h1 class="page-header-title" data-ix="fade-in-on-load"
+        style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">
+        {{title}}</h1>
+      <h2 class="page-header-title subtitle" data-ix="fade-in-on-load-2"
+        style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">
+        {{desc}} </h2>
+    </div>
+  </div>
+  <div class="page-image-header" style="background-image: url('/images/receipe.jpg')">
+    <div class="recipe-image-overlay">
+      <div class="main-content-wrapper recipe-image">
+        <div class="recipe-summary-block w-clearfix" data-ix="fade-in-on-load-3"
+          style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 500ms ease 0s, transform 500ms ease 0s;">
+          {{!-- <div class="recipe-summary-item-block"><img class="recipe-summary-icon" sizes="28px"
+              src='/images/category.png'>
+            <div class="description recipe-summary-title">Category</div>
+            <div class="recipe-summary-title">{{category}}</div>
+          </div>
+          <div class="recipe-summary-item-block"><img class="recipe-summary-icon" src='/images/time.png'>
+            <div class="description recipe-summary-title">Time</div>
+            <div class="recipe-summary-title">{{preparationtime}}</div>
+          </div> --}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="main-content-wrapper">
+      <div class="recipe-row w-row">
+        <div class="recipe-column-left w-col w-col-5">
+          <div class="sidebar-block">
+            <div class="block-title">Ingredients:</div>
+            <div class="ingredients-text-block w-richtext">
+              <ul>
+
+                {{#each items}}
+                <li><strong>{{title}}</strong></li>           
+               
+                  {{/each}}
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <div class="block-title">Needed:</div>
+            <div class="ingredients-text-block w-richtext">
+              <ul>
+                <li>Blender</li>
+                <li>Grill pan</li>
+                <li>Mixer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="recipe-column-right w-col w-col-7">
+          <div class="recipe-content-block">
+            <h1 class="recipe-intro-title">Instructions</h1>
+            {{!-- <div class="recipe-video-block">
+              <div class="recipe-video w-embed w-video" style="padding-top: 56.39999999999999%;"><iframe
+                  class="embedly-embed"
+                  src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F4wSQB6FRUvM%3Ffeature%3Doembed&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D4wSQB6FRUvM&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F4wSQB6FRUvM%2Fhqdefault.jpg&amp;key=c4e54deccf4d4ec997a64902e9a30300&amp;type=text%2Fhtml&amp;schema=youtube"
+                  width="250" height="141" scrolling="no" frameborder="0" allowfullscreen=""></iframe></div>
+            </div> --}}
+            <div class="recipe-rich-text-block w-richtext">
+              {{!-- <p>{{prep}}</p> --}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+</body>
